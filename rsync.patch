@@ -1,9 +1,9 @@
---- pigz-2.3.1/pigz.c.org	2014-12-31 11:09:06.244358641 -0500
-+++ pigz-2.3.1/pigz.c	2014-12-31 11:10:12.981524312 -0500
-@@ -3701,10 +3701,10 @@
+--- pigz-2.7/pigz.c~	2022-01-15 19:18:20.000000000 +0000
++++ pigz-2.7/pigz.c	2022-01-16 22:56:12.331043423 +0000
+@@ -4343,10 +4343,10 @@
      g.procs = nprocs(8);
+     g.shift = x2nmodp(g.block, 3);
  #endif
-     g.block = 131072UL;             // 128K
 -    g.rsync = 0;                    // don't do rsync blocking
 +    g.rsync = 1;                    // don't do rsync blocking
      g.setdict = 1;                  // initialize dictionary each thread

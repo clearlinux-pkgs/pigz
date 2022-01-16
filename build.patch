@@ -1,0 +1,11 @@
+--- pigz-2.7/pigz.c~	2022-01-16 22:56:12.000000000 +0000
++++ pigz-2.7/pigz.c	2022-01-16 23:03:05.317037673 +0000
+@@ -412,7 +412,7 @@
+ #  define _exit(s)     exit(s)
+ #endif
+ 
+-#include "zlib.h"       // deflateInit2(), deflateReset(), deflate(),
++#include <zlib.h>       // deflateInit2(), deflateReset(), deflate(),
+                         // deflateEnd(), deflateSetDictionary(), crc32(),
+                         // adler32(), inflateBackInit(), inflateBack(),
+                         // inflateBackEnd(), Z_DEFAULT_COMPRESSION,

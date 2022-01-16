@@ -2,3 +2,4 @@
 rsync.patch
 link.patch
 error.patch
+build.patch

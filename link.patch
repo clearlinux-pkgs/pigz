@@ -2,8 +2,8 @@
 +++ pigz-2.4/Makefile	2017-12-27 16:34:52.785708609 +0000
 @@ -1,5 +1,5 @@
  CC=gcc
--CFLAGS=-O3 -Wall -Wextra -Wno-unknown-pragmas
-+CFLAGS+=-O3 -Wall -Wextra -Wno-unknown-pragmas
+-CFLAGS=-O3 -Wall -Wextra -Wno-unknown-pragmas -Wcast-qual
++CFLAGS+=-O3 -Wall -Wextra -Wno-unknown-pragmas -Wcast-qual
  LDFLAGS=
  LIBS=-lm -lpthread -lz
  ZOPFLI=zopfli/src/zopfli/
