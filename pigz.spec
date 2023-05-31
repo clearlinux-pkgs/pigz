@@ -5,7 +5,7 @@
 #
 Name     : pigz
 Version  : 2.7
-Release  : 50
+Release  : 51
 URL      : https://zlib.net/pigz/pigz-2.7.tar.gz
 Source0  : https://zlib.net/pigz/pigz-2.7.tar.gz
 Summary  : pigz is a parallel implementation of gzip which utilizes multiple cores
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683221949
+export SOURCE_DATE_EPOCH=1685572169
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -90,7 +90,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1683221949
+export SOURCE_DATE_EPOCH=1685572169
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pigz
 cp %{_builddir}/pigz-%{version}/zopfli/COPYING %{buildroot}/usr/share/package-licenses/pigz/6d182cfd7e2a6c633140f7cdb0c4a46fc4a23589 || :
@@ -105,7 +105,6 @@ popd
 
 %files bin
 %defattr(-,root,root,-)
-/V3/usr/bin/gzip
 /V3/usr/bin/pigz
 /usr/bin/gzip
 /usr/bin/pigz
