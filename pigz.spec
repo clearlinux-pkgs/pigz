@@ -4,10 +4,10 @@
 # Using build pattern: make
 #
 Name     : pigz
-Version  : 2.7
-Release  : 51
-URL      : https://zlib.net/pigz/pigz-2.7.tar.gz
-Source0  : https://zlib.net/pigz/pigz-2.7.tar.gz
+Version  : 2.8
+Release  : 52
+URL      : https://zlib.net/pigz/pigz-2.8.tar.gz
+Source0  : https://zlib.net/pigz/pigz-2.8.tar.gz
 Summary  : pigz is a parallel implementation of gzip which utilizes multiple cores
 Group    : Development/Tools
 License  : Apache-2.0 Zlib
@@ -53,15 +53,15 @@ man components for the pigz package.
 
 
 %prep
-%setup -q -n pigz-2.7
-cd %{_builddir}/pigz-2.7
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
-%patch5 -p1
+%setup -q -n pigz-2.8
+cd %{_builddir}/pigz-2.8
+%patch -P 1 -p1
+%patch -P 2 -p1
+%patch -P 3 -p1
+%patch -P 4 -p1
+%patch -P 5 -p1
 pushd ..
-cp -a pigz-2.7 buildavx2
+cp -a pigz-2.8 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685572169
+export SOURCE_DATE_EPOCH=1692637852
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -90,7 +90,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1685572169
+export SOURCE_DATE_EPOCH=1692637852
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pigz
 cp %{_builddir}/pigz-%{version}/zopfli/COPYING %{buildroot}/usr/share/package-licenses/pigz/6d182cfd7e2a6c633140f7cdb0c4a46fc4a23589 || :
